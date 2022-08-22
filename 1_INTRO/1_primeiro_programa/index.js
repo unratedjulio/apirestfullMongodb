@@ -27,7 +27,7 @@ res.json({ message: 'OI Express!'})
 
 })
 
-// senha 58721695
+
 // mongodb+srv://julioamorim:<password>@apicluster.cxhdcwe.mongodb.net/?retryWrites=true&w=majority
 
 // entregar uma porta
