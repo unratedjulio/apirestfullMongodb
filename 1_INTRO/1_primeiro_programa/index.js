@@ -28,7 +28,7 @@ res.json({ message: 'OI Express!'})
 })
 
 
-// mongodb+srv://julioamorim:<password>@apicluster.cxhdcwe.mongodb.net/?retryWrites=true&w=majority
+// MongoDB link = mongodb+srv://julioamorim:<password>@apicluster.cxhdcwe.mongodb.net/?retryWrites=true&w=majority
 
 // entregar uma porta
 const DB_USER = process.env.DB_USER
