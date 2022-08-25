@@ -20,7 +20,7 @@ app.use('/person', personRoutes)
 // rota iniciaql / endpoint
 app.get('/', (req, res) => {
 
-    // mostrar req
+    // mostrar requerimento
 
 
 res.json({ message: 'OI Express!'})
