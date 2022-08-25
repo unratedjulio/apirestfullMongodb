@@ -9,14 +9,14 @@ router.post('/', async (req, res)=> {
     const {name, salary, approved} = req.body
     
     if(!name) {
-        res.status(422).json({ error: 'Nome Obrigatório!'})
-        return
+            res.status(422).json({ error: 'Nome Obrigatório!'})
+    return
     }
     
     const person = {
-        name,
-        salary,
-        approved,
+            name,
+            salary,
+            approved,
     }
     
     try {
@@ -24,10 +24,10 @@ router.post('/', async (req, res)=> {
     await Person.create(person)
     
     // http status
-    res.status(201).json({message: 'Pessoa inserida no sistema com sucesso'})
+            res.status(201).json({message: 'Pessoa inserida no sistema com sucesso'})
     
     } catch (error) {
-        res.status(500).json({error: error})
+            res.status(500).json({error: error})
     }
     
     })
@@ -48,7 +48,9 @@ router.post('/', async (req, res)=> {
     router.get('/:id', async (req, res)=> {
 
         console.log(req)
+        
         // extrair o dado da requisição, pela url = req.params
+        
         const id = req.params.id
 
         try {
@@ -81,11 +83,11 @@ router.post('/', async (req, res)=> {
         
         try {
 
-            const updatedPerson = await Person.updateOne({_id:id}, person)
+        const updatedPerson = await Person.updateOne({_id:id}, person)
 
             console.log(updatedPerson)
 
-            if(updatedPerson.matchdCount === 0)
+        if(updatedPerson.matchdCount === 0)
 
             res.status(200).json(person)
 
